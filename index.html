@@ -5,14 +5,16 @@
   <title>404 - Lost in the Code</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: #00ffcc;
-      font-family: 'Share Tech Mono', monospace;
-      overflow: hidden;
-    }
+   body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: monospace;
+  background: black;
+  color: #00ffcc;
+}
 
     canvas {
       position: fixed;
@@ -21,10 +23,13 @@
       z-index: -1;
     }
 
-    .container {
-      text-align: center;
-      padding-top: 120px;
-    }
+   .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 30vh;
+  color: #00ffee;
+}
 
     h1 {
       font-size: 6rem;
@@ -128,11 +133,18 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -9998; /* just behind terminal */
-  pointer-events: none; /* so it doesn’t block clicks or input */
+  z-index: -1;
+  background: black;
 }
 
-
+    a {
+  color: #00ffee;
+  text-decoration: none;
+  border: 1px dashed #00ffee;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+}
   </style>
 </head>
 <body>
